@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="titulos_texto_stilo">
+        <item name="android:layout_marginTop">@dimen/Margen_base</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/texto_tamaño</item>
+    </style>
+</resources>

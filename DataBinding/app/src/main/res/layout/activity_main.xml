@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+         <variable
+             name="MiNombre"
+             type="com.itvo.databinding.MyNombre" />
+        
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margen_base"
+        android:layout_marginEnd="@dimen/Margen_base"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/nombre_text"
+            style="@style/titulos_texto_stilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{MiNombre.nombre}" />
+
+        <EditText
+            android:id="@+id/Usuario_editText"
+            style="@style/titulos_texto_stilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Cual_es_tu_nombre"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/btn_terminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/Margen_base"
+            android:text="@string/terminado" />
+
+        <TextView
+            android:id="@+id/usuario_text"
+            style="@style/titulos_texto_stilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{MiNombre.usuario}"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/perfil_imagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Margen_base"
+            android:contentDescription="@string/contenido_de_imagen"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/Margen_base">
+
+            <TextView
+                android:id="@+id/descripcion_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="@dimen/Interlineado"
+                android:text="@string/descripcion_texto" />
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
